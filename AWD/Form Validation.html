@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        div.box {
+            border: 2px solid red;
+            width: 20%;
+            border-radius: 51px;
+            margin-left: 35%;
+            padding: 5%;
+        }
+        form {
+            margin-left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <center> -->
+    <div class="box">
+        <center><h2>Sample Form</h2></center>
+        <hr>
+        <form action="" id="form1">
+            Name*: 
+            <input type="text" name="" id="" required>
+            <br><br>
+            Email*:
+            <input type="email" name="" id="" required>
+            <br><br>
+            Roll No.:
+            <input type="number" name="" id="" min="1000000000" max="9999999999">
+            <br><br>
+            Age:
+            <input type="number" name="" value="18" min="18" max="100">
+            <br><br>
+            Gender:
+            <select name="" id="">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="mo">Mohit</option>
+                <!-- <option value="o">Others</option> -->
+            </select>
+            <br><br>
+            <button type="submit" form="form1">Submit</button>
+        </form>
+    </div>
+    <!-- </center> -->
+    <script>
+
+    </script>
+</body>
+</html>

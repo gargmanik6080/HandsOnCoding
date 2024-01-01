@@ -1,0 +1,45 @@
+ <html>
+<body>
+
+    <p id="demo"></p>
+<script>
+//     var myVar = 100;
+
+// function WhoIsThis() {
+
+//     alert(this.myVar);
+// }
+
+// var obj1 = { myVar : 200 , whoIsThis: WhoIsThis };
+
+// var obj2 = { myVar : 300 , whoIsThis: WhoIsThis };
+
+// WhoIsThis(); // 'this' will point to window object
+
+// WhoIsThis.call(obj1); // 'this' will point to obj1
+
+// WhoIsThis.apply(obj2); // 'this' will point to obj2
+
+// obj1.whoIsThis.call(window); // 'this' will point to window object
+
+// WhoIsThis.apply(obj2); // 'this' will point to obj2
+
+
+
+class Car {
+      constructor(name, year) {
+            this.name = name;
+            this.year = year;
+      }
+      age() {
+            let date = new Date();
+            return date.getFullYear() - this.year; 
+    }
+}
+
+let myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML = "My car is " + myCar.age() + " years old.";
+
+</script>
+</body>
+ </html>

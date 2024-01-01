@@ -1,0 +1,16 @@
+#!/bin/bash 
+#following code is for validating that two arguments are passed
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 <number1> <number2>"
+  exit 1
+fi
+
+# you need to store the argument in a separate shell variable
+num1=$1
+num2=$2
+
+sum=$(expr $num1 + $num2) # $(($num1 + $num2))
+echo $sum
+diff=$(expr $num1 - $num2) # $(($num1 - $num2))
+echo $diff
+echo "$@"

@@ -1,0 +1,2 @@
+val="Yes"
+echo  `[ $val == "True" ]`

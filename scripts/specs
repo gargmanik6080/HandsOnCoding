@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#echo -e "###################### SYSTEM INFORMATION ###########################\n\n"
+
+#echo -e "My logged in User name is\t\t: \t${USER}"
+#echo -e "My kernal version is\t\t\t: \t$(uname -r)"
+#echo -e "My present working directory is\t\t: \t$(pwd)"
+
+## /etc/psswd print forst 3 column of last 5 user
+## add and set passwd of user
+## no. f cpu, thread n core per socket 
+echo -e "$(awk -F ":" '{print$1,$3,$6}' /etc/passwd | tail -5)\n\n"
+#echo -e "$(useradd user_x && echo -e "root\nroot\n" | passwd user_x)"
+lscpu | grep -e "CPU family:" -e "Core(s)" -e "Thread(s) per core" 

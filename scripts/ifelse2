@@ -1,0 +1,20 @@
+#!/bin/bash
+## if redhat fedora 
+## if fedora redhat 
+## else wrong input
+
+echo "Which distro do you use: "
+read a
+
+f="fedora"
+r="redhat"
+if [ $a = $f ] 
+	then 
+	echo "$r"
+
+elif [ $a = $r ] 
+	then 
+	echo "$f"
+
+else echo "Wrong Input"
+fi

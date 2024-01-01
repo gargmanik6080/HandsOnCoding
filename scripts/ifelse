@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#if [ $1 = ashish ]
+#then 
+#echo "my name is $1"
+#else 
+#echo "wrong name"
+#fi
+
+### '=' COMPARES AS STRING
+echo "Enter 1st no.: "
+	read a
+echo "Enter 2nd no.: "
+	read b
+
+[[ $a = $b ]] && echo "True" || echo "False"

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+num1=10
+num2=20
+
+#num1=$1
+#num2=$2
+#echo "enter the value of NUM1"
+#read num1
+#echo "Enter the value of NUM2"
+#read num2
+
+
+#read -p "Enter num1" : num1
+#read -p "Enter num1" : num1
+#echo $num1
+
+echo -e "Addition of two numbers"
+sum=$[${num1} + ${num2}]
+echo -e "${sum}"
+
+echo -e "Subtraction of two numbers"
+diff=$[${num1} - ${num2}]
+echo -e "${diff}"
+
+echo -e "Multiplication of two numbers"
+mul=$[${num1} * ${num2}]
+echo -e "${mul}"
+
+
+echo -e "Division of two numbers"
+div=$[${num1} / ${num2}]
+echo -e "${div}"
+
+
+

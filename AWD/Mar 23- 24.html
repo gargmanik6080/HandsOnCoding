@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+//         class Point {    constructor(x, y) {
+//             this.x = x; this.y = y;  }
+//             static displayName = "Point";
+//             static distance(a, b) 
+//             {
+//                 const dx = a.x - b.x; 
+//                 const dy = a.y - b.y;
+//                 return Math.hypot(dx, dy); 
+//             }}
+//             const p1 = new Point(5, 5); 
+//             const p2 = new Point(10, 10); 
+//             p1.displayName; 
+//             document.write(p1.distance); 
+//             p2.displayName; 
+//             p2.distance; 
+//             console.log(Point.displayName); 
+//             console.log(Point.distance(p1, p2)); 
+// // 7.0710678118654755 
+
+
+
+        // class cal {
+        //     static c 
+        //     static d 
+
+        //     sum(a, b) 
+        //     {
+        //         document.write("Sum : ", a+b)
+        //     }
+        //     diff(a, b)
+        //     {
+        //         document.write("<br>Difference : ", a-b)
+        //     }
+        //     static mul(c, d)
+        //     {
+        //         document.write("<br>Product : ", c*d)
+        //     }            
+        //     static div(c, d)
+        //     {
+        //         document.write("<br>Divisor : ", d/c)
+        //     }
+        // }
+        // let a1 = new cal()
+        // a1.sum(12, 24)
+        // a1.diff(24, 12)
+        // // a1.mul(2, 10)
+        // // a1.div(5, 5)
+        // cal.mul(25, 5)
+        // cal.div(5, 125)
+        // // cal.add(2, 10)
+
+
+
+        // var a = 10; 
+        // var b = 20
+        // var c = 11
+        // var d = 25
+        // function add()
+        // {
+        //     document.write(a+b)
+        // }
+        // a = 30
+        // b = 50
+        // add()
+
+
+
+        class car
+        {
+            constructor (name, model, year, price)
+            {
+                this.name = name
+                this.model = model
+                this.year = year
+                this.price = price
+            }
+
+
+            // subclass 
+            print(name, model, year, price)
+            {
+
+                document.write("<h2>Details of Car</h2>The name of car is : ",name, "<br>Model : ", model, "<br>Year of Purchase : ", year, "<br>Current Price : ", price)
+            }
+        }
+
+
+        let car1 = new car
+        car1.print("Skoda", "Octavia", 2013, "Rs. 3,00,000/-")
+    </script>
+</body>
+</html>

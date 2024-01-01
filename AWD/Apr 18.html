@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("div").animate({
+//         blur:'12px',
+//         left: '250px',
+//     //   opacity: '0.5',
+//         height: '-=50px',
+//         width: '+=150px',
+//         border :'2px 5px solid black'
+//     });  }); });
+
+    // $(document).ready(function() {
+    //     $("div").click(function() {
+    //         var content = $(this).html();
+    //         $("#result").text(content);
+    //     });
+    // });
+
+
+    $(document).ready(function() {
+        $("div").click(function() {
+            $(this).replaceWith("<h1>JQuery is Great??")
+        });
+    });
+</script> 
+<style>
+    #division{
+        margin: 10px;
+        padding:12px;
+        border: 2px solid black;
+        width: 60px;
+    }
+</style>
+</head>
+
+<!-- <body background-color="black">
+<button>Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div style="background:#3a0ae705;height:100px;width:100px;position:absolute;"></div>
+</body> -->
+
+<body>
+    <span id="result"></span>
+    <div id="division" style="background-color: blue;">
+        This is Blue Square!!
+    </div>
+</body>
+</html>

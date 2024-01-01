@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            button{
+                cursor: pointer;
+            }
+        </style>
+  </head>
+
+  <body>
+        <div>
+            <button id="btn1">Start Animation</button>
+            <button id="btn2">Hide/Show</button>
+            <button id="btn3">Fade</button>
+            <button id="btn4">Slide up/Down</button>
+        </div>
+        <div>
+            <h1 id="p">Happy Birthday Sam</h1>
+        </div>
+  </body>
+    <script>
+    $("#btn1").click(function(){
+        $("#p").animate({ 
+            opacity: '0.7', 
+            fontSize: '3em',
+            height: '100px',
+            opacity: '0.4',
+            width: '500px'
+        }),
+        $("")
+    })
+        
+    $("#btn2").click(function(){
+        if ($("#p").is(":hidden")){
+            $("#p").show()
+        } else {
+            $("#p").hide();
+        }
+    })
+
+    $("#btn3").click(function(){
+        $("#p").fadeTo("slow", 0.2);
+    })
+
+    $("#btn4").click(function(){
+        $("#p").slideToggle(2000);
+        $("#p").css("padding-top", "100px");
+        $("#p").css("width", "1000px");
+        
+    })
+    </script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            button{
+                cursor: pointer;
+            }
+        </style>
+  </head>
+
+  <body>
+        <div>
+            <button id="btn1">Start Animation</button>
+            <button id="btn2">Hide/Show</button>
+            <button id="btn3">Fade</button>
+            <button id="btn4">Slide up/Down</button>
+        </div>
+        <div>
+            <p id="p">Happy Birthday Sam</p>
+        </div>
+  </body>
+    <script>
+    $("#btn1").click(function(){
+        $("#p").animate({ 
+            opacity: '0.7', 
+            height: '+=100px',
+            fontSize: '3em',
+
+
+        }, 1000)
+        $("#p").animate({ 
+
+            opacity: '0.4',
+            width: '+=100px'
+
+        }, 1000)
+        $("#p").css("padding-left","+=50")
+        // $("#p").css("height", "+=100")
+        // $("#p").css("width", "+=100")
+    })
+        
+    $("#btn2").click(function(){
+        if ($("#p").is(":hidden")){
+            $("#p").show()
+        } else {
+            $("#p").hide();
+        }
+    })
+
+    $("#btn3").click(function(){
+        $("#p").fadeTo("slow", 0.2);
+    })
+
+    $("#btn4").click(function(){
+        $("#p").slideToggle(2000);
+        $("#p").css("padding-top", "50px");
+    })
+    </script>
+</html>

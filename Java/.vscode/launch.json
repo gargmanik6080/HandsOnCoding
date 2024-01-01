@@ -1,0 +1,119 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "prac2",
+            "request": "launch",
+            "mainClass": "prac2",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "floyd_triangle",
+            "request": "launch",
+            "mainClass": "floyd_triangle",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "io_stream",
+            "request": "launch",
+            "mainClass": "io_stream",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "generics_prac",
+            "request": "launch",
+            "mainClass": "generics_prac",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "generics",
+            "request": "launch",
+            "mainClass": "generics",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "multi3",
+            "request": "launch",
+            "mainClass": "multi3",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "multi2",
+            "request": "launch",
+            "mainClass": "multi2",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "Demo",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "inheritance_prac",
+            "request": "launch",
+            "mainClass": "inheritance_prac",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "basic",
+            "request": "launch",
+            "mainClass": "basic",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "Java_b31633c5"
+        },
+        {
+            "type": "java",
+            "name": "Launch tmp",
+            "request": "launch",
+            "mainClass": "tmp",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverse",
+            "request": "launch",
+            "mainClass": "reverse",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hel",
+            "request": "launch",
+            "mainClass": "Hel",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "Java_f6a3e0d3"
+        }
+    ]
+}

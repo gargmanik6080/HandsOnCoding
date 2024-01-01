@@ -1,0 +1,62 @@
+#!/bin/bash
+for file in "$@"
+do 
+if [ -f $file -a -w $file ]
+then
+	echo "File $file exits and is writable"
+else
+	echo "File $file donot exist"
+	read -p "Do you want to create this file? Press 1 if Yes : " options
+	if [ options = 1 ]
+	then
+		[ cat $file]
+		echo "File $file created "
+	fi 
+fi
+done
+
+
+<< ////
+# $@
+for filename in "$@"
+do
+        if [ ! -e "$filename" ] || [ ! -w "$filename" ]; then
+                echo "either $filename doesnot exist or is not writeable, do you want to  make it writeable? 1 for yes"
+                read options
+                if [ "$options" -eq 1 ]; then
+                        touch $filename
+                        echo "the #filename is processed"
+                fi
+        else
+                echo "$filename Exists!"
+        fi
+done
+////
+
+
+
+<< ////
+## write a shell scriot that uses a for loop to iterate over alist of files in a directo>
+## <sions for each files
+
+dir=$1
+filerights=""
+
+for filename in $dir/*
+do
+        if [ -f "$filename" ]; then # test if the name provided is a file  or not
+                filerights=""
+                if [ -r "$filename" ]; then #3 test the file status
+                        filerights="$filerights read" # concat the text to a variable
+                fi
+                if [ -w "$filename" ]; then
+                        filerights="$filerights write"
+                fi
+                if [ -x "$filename" ]; then
+filerights="$filerights execute"
+                fi
+                echo "The file -$filename- has following rights: $filerights " # print the information for the  analysis on the file
+        fi
+done
+
+////

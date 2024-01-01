@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#for i in 1 2 3 4 5 
+#do 
+#echo "my no. is ${i}"
+#sleep 3
+#done
+
+
+####for i in { 001 .. 100 }
+#do echo "172.168.20.${i}"
+#done
+
+#for i in `cat myip.txt`
+#do 
+#echo `ping -c2 $i`
+#echo -e "\nHello..."
+#sleep 1
+#done
+
+
+## CREATE  A SCRIPT ON DESKTOP 
+	# IT SHD BE SINGLE ARG WHICH IS NAME OF FILE
+	# THAT CONTAINS 5 USERNAMES
+	# IF ARG IS NOT PASSED IT SHD DISPLAY  ARG NOT PASSED
+
+	# IF NOT EXISTENT FILE IS SPECIFIED  OT SHD DISPLAY FILE NOT FOUND
+
+	#  ACCOUNTS SHD BE CREATED FILE NO LOGIN SHELL
+
+
+if [ $1 = "" ]
+then 
+echo "Argument not passed"
+
+elif ![ -e $1 ]
+then 
+echo "NON EXISTENT FILE"
+
+else 
+	for i in `cat $1`
+	do
+	useradd --shell /sbin/nologin $i
+	echo "$i user added"
+	done
+fi

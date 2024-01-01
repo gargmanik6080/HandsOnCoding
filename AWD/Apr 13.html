@@ -1,0 +1,72 @@
+<!-- <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).slideToggle();
+    });
+    $("button").click(function(){
+        $("p").unbind();
+    });
+});
+</script></head><body>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<p>Click any p element to make it disappear.</p>
+<button>Remove all event handlers for all p elements</button>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html><head>	
+<title>jQuery trigger()</title> </head>
+<body>
+	<div class="box-1">
+		<h1>0</h1>	</div>
+	
+	<button id="btn1">Increase #1</button>
+	
+	<div class="box-2">
+		<h1>0</h1>	</div>	
+	<button id="btn2">Increase #2</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">	</script>
+<script>
+    $(document).ready(function() {
+    $("#btn1").click(function() {
+    Increase($(".box-1>h1"))		})
+    $("#btn2").click(function() {
+    $("#btn1").trigger("click");	
+    Increase($(".box-2>h1"))		})
+    function Increase(obj) {
+    var text = parseInt(obj.text(), 10);
+    obj.text(text + 1);			} });
+</script>
+</html>	 -->
+
+
+<!-- <body onclick="alert(`the bubbling doesn't reach here`)">
+    <button onclick="event.stopPropagation()">Click me</button>
+</body>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    // $("p").toggle();
+    // $("p").slideToggle();
+    $("p").fadeOut()
+});
+});
+</script>
+</head>
+<body>
+<p>Hello to EveryOne</p>
+<button>Toggle</button>
+</body>
+</html>
+

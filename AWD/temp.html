@@ -1,0 +1,105 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+        <p>
+            Enter the number of items in fibonacci series:
+            <input type="text" id="in">
+            <input type="button" value="Submit"  id="btn">
+        </p>
+        <b>Output:</b>
+        <p id ="out">
+            
+        </p>
+        
+        <script>
+            // document.write("hi")
+            $(document).ready(
+            function(){
+        	$("#btn").click(
+            	function(){
+                	const n = parseInt($("#in").val())
+                	var a = 0
+                	var b = 1
+                	var str = ""
+                	str = str + a + "," + b 
+                	$("#out").append(str)
+                   str = ""
+            	// document.write("hi")
+                  for(i = 0; i<(n-2); i++)
+                  {
+                     c = a + b
+                     str = str + "," + (c)
+                     a = b
+                     b = c
+                  }
+                  $("#out").append(str)
+
+                })
+                }
+                );
+        </script>
+	</body>
+<-- </html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            button{
+                cursor: pointer;
+            }
+        </style>
+  </head>
+
+  <body>
+        <div>
+            <button id="btn1">Start Animation</button>
+            <button id="btn2">Hide/Show</button>
+            <button id="btn3">Fade</button>
+            <button id="btn4">Slide up/Down</button>
+        </div>
+        <div>
+            <h1 id="p">Happy Birthday Sam</h1>
+        </div>
+  </body>
+    <script>
+    $("#btn1").click(function(){
+        $("#p").animate({ 
+            opacity: '0.7', 
+            fontSize: '3em',
+            height: '100px',
+            opacity: '0.4',
+            width: '500px'
+        }, 2000);
+        $('#p').animate({
+                left: "518px"
+            }, 2000);
+    })
+        
+    $("#btn2").click(function(){
+        if ($("#p").is(":hidden")){
+            $("#p").show()
+        } else {
+            $("#p").hide();
+        }
+    })
+
+    $("#btn3").click(function(){
+        $("#p").fadeTo("slow", 0.2);
+    })
+
+    $("#btn4").click(function(){
+        $("#p").slideToggle(2000);
+        $("#p").css("padding-top", "100px");
+        $("#p").css("width", "1000px");
+        
+    })
+    </script>
+</html>

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+echo  "Enter exactly one argument"
+exit 1
+fi
+file=$1
+
+touch $1
+mkdir test
+cp $1 test/
+echo "Operations completed"

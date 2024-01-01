@@ -1,0 +1,54 @@
+#!/bin/bash
+
+
+#strval=$1
+
+#if [[ "$strval" =~  ^[a-zA-Z]+$ ]]; then
+#        echo "The value provided in the argument is only consisiting of Alphabets"
+#else
+#        echo "The value provided in argument is consisiting of more that alphabets"
+#fi
+
+
+#strval=$1
+#
+#if [[ "$strval" =~  ^[0-9]+[a-zA-Z]+$ ]]; then
+#        echo "The value provided in the argument is only consisiting of Alphabets"
+#else
+#        echo "The value provided in argument is consisiting of more that alphabets"
+#fi
+
+
+read -p "Enter your fname: " fname
+read -p "Enter your lastname: " lname
+read -p "Enter your roll number: " roll
+
+if [[ "$name" =~  ^[a-zA-Z]+$ ]]; then
+        echo "The value provided as fname has been accepted..."
+else
+        echo "The value provided as fname has not been accepted..."
+fi
+
+if [[ "$name" =~  ^[a-zA-Z]+$ ]]; then
+        echo "The value provided as lname has been accepted..."
+else
+        echo "The value provided as lname has not been accepted..."
+fi
+
+if [[ "$name" =~  ^[0-9]+$ ]]; then
+        echo "The value provided as name has been accepted..."
+else
+        echo "The value provided as name has not been accepted..."
+fi
+
+########################
+#while [ 1 -eq 1 ] # while statemetn with condition testing to be true
+#do ##start of the curly braces like in c pogramming
+#        echo "Enter first name"
+#        read fName
+#        ## following if condition is going to compare the value of fname to alphabets
+#        if [[ "$fName" =~ ^[a-zA-Z]+$ ]]; then
+#                echo "first name is alphabets only"
+#                break ### basicaslly going to initiate a particular exit for loop
+#        else
+#                echo "Non-aplhabet are recogniz

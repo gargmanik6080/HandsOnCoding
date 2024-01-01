@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h2>Create Object from JSON String</h2>
+<p id="demo"></p>
+<script>
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+console.log(typeof(text));
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+console.log(typeof(obj));
+</script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Parsing a JSON Array.</h2>
+<p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+<p id="demo"></p>
+
+<script>
+const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+console.log(typeof(text))
+const myArr = JSON.parse(text);
+console.log(typeof(myArr))
+document.getElementById("demo").innerHTML = myArr[0];
+</script>
+
+</body>
+</html> -->
+
+
+<html><body>
+    <h2>The XMLHttpRequest Object</h2>
+    <button type="button" onclick="loadDoc()">Request data</button>
+    <p id="demo"></p>
+    <script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {  document.getElementById("demo").innerHTMLthis.responseText;
+      }
+      xhttp.open("GET", "demo_get.asp"); // url: ‘demo_get.asp’ must be given an id
+      xhttp.send();   }
+    </script></body></html>
+    

@@ -1,0 +1,151 @@
+<html>
+<body>
+    <p id="demo"></p>
+    <script>
+        // let x = "Volvo" + 16 + 4; 
+        // document.write(x, typeof(x))
+
+        // let x = 5;
+        // let y = 5;
+        // let z = 6;
+        // document.write(x == y, " <br>")   // Returns true
+        // document.write(x == z, "<br>")       // Returns false
+
+
+
+        // //OPERATORS
+        // document.write(15+25, "<br>")
+        // document.write(25-25), "<br>"
+        // document.write(8*1, "<br>")
+        // document.write(8/2, "<br>")
+        // document.write(9%2, "<br>")
+        // document.write(5==6, "<br>")
+        // document.write(5!=6, "<br>")
+        // document.write()
+        // document.write()
+        // document.write()
+
+        // let i = 5;
+        // for (let i = 0; i < 10; i++) 
+        // {
+        //     document.write(i, " <br>")
+        // }
+
+
+
+        // function toCelsius(fahrenheit)
+        // {
+        //     return (5/9) * (fahrenheit-32);
+        // }
+        // document.getElementById("demo").innerHTML = toCelsius(77);
+
+
+        // function myFunction(a, b) 
+        // {
+        //     return arguments.length;
+        // }
+        // document.write(myFunction(1,2,3,33,4,4), "<br>")
+
+
+
+        // function add()
+        //  {
+        //      let counter = 0;
+        //      function plus() 
+        //          {
+        //              counter += 1;
+        //          }
+        //      plus();
+        //     return counter;
+        // }
+        // document.write(add())
+
+        // const add = (
+        //     function() 
+        // {
+        //     let counter =0;
+        //     return function()
+        //     {
+        //         counter += 1; 
+        //         return counter
+        //     }
+        // }
+        // )();
+        
+        // document.write(add())
+        // document.write(add())
+        // document.write(add())
+
+            ///ARRAYS
+
+        // fruit = ["apple", "orange", "pear", "mango", "bananananananana", "guava"]
+        // fruit[0] = "grapes"
+        // document.write(fruit, "<br>")
+        // fruit.splice(2, 0, "Lemon", "Kiwi")
+        // document.write(fruit, "<br>")
+        // // document.write(toString(fruit), "<br>")
+        // document.write(fruit.join(" @  "), "<br>")
+        // fruit.shift()
+        // document.write(fruit, "<br>")
+        // // document.write(fruit[::3] , "<br>")
+        // document.write(fruit.toString() , "<br>")
+        // fruit.unshift("First")
+        // fruit.pop()
+        // fruit.pop()
+        // document.write(fruit, "<br>", "<br>", "<br>", "<br>")
+
+
+        // const numbers = [45, 4, 9, 16, 25];
+        // let txt ="";
+        // numbers.forEach(myFunction);
+        
+        // function myFunction(value) 
+        // {
+        //    txt += value + "<br>";
+        // }
+
+        // document.write(txt)
+
+
+
+
+        ///OBJECT(DICT)
+        abc = {"name":"Manik", "age":18}
+        document.write(abc["name"], "<br>")
+        document.write(abc.age, "<br>")
+        abc["class"] = "G12"
+        document.write(abc["class"], "<br>", "<br>", "<br>")
+
+
+        const person = {
+              firstName: "John",
+              lastName : "Doe",
+              id       : 5566,
+              fullName : function() {
+                    return this.firstName + " " + this.lastName;
+              }}
+
+            document.write(person.fullName())
+
+
+
+            const myObj = {
+                  name: "John",
+                  age: 30,
+                  cars: [
+                        {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                        {name:"BMW", models:["320", "X3", "X5"]},
+                        {name:"Fiat", models:["500", "Panda"]}
+                  ]
+        }
+        for (let i in myObj.cars) {
+             x += "<h1>" + myObj.cars[i].name + "</h1>";
+               for (let j in myObj.cars[i].models) {
+                     x += myObj.cars[i].models[j];
+                  }}
+
+        document.write(x)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    // let reg =/This/; //This is a regular expression literal in js
+    // console.log(reg);
+    // console.log(reg. source);
+    // let s="This is great code with abc";
+    // let result = reg.exec (s);
+    // console.log(result);
+
+    // let reg =/abc/g; //g means global
+    // console.log(reg);
+    // console.log(reg. source);
+    // let s='This is great code with abc and abc';
+    // //Functions to match expressions
+    // //exec()- This function will return an array for match or null for no match
+    // let result = reg.exec (s);
+    // console.log(result);
+    // result = reg.exec (s);
+    // console.log(result);
+    // result = reg.exec (s);
+    // console.log(result);
+
+    // let reg =/This/g; //g means global
+    // let reg1 =/This/i; //i means case insensitivity
+    // console.log(reg);
+    // console.log(reg1. source);
+    // let s='ThIs is great code with abc and abc';
+    // //Functions to match expressions
+    // //exec()- This function will return an array for match or null for no match
+    // // let result = reg.exec(s);    
+    // let result1 = reg1.exec(s);
+
+    // // console.log(result);
+    // console.log(result1);
+    // console.log(result1.input);//retrieves the complete input
+    // console.log(result1.index); //retrieves index of reg
+
+    //----------------------------------------------------------------------------------
+
+    // const chess = "He played the King in A8 and she moved her Queen in C2..."
+    // const reg = /\w\d/g
+    // document.write(chess.match(reg), "<br>")
+
+    // const moods = "happy 🙂, confused 😕, sad 😢"
+    // const reg1 = /[\u{1F600}-\u{1F64F}]/gu
+    // document.write(moods.match(reg1))
+
+
+    // bm = "tey, ihe light-greon apple tangs on ihe greon traa"
+    // document.write("Original: ", bm, "<br>")
+    
+    // bm = bm.replace(/^t/gim, "h")
+    // document.write(1, bm, "<br>")
+
+    // bm = bm.replace(/aa$/gim, "ee")
+    // document.write(2, bm, "<br>")
+
+
+    // bm = bm.replace(/\bi/gim, "t")
+    // document.write(3, bm, "<br>")
+
+    // fm = bm.replace(/\Bo/gim, "e")
+    // document.write(4, fm, "<br>") text = "The best things in life are free";
+    let pattern = /e/
+    let result = pattern.test(text);
+    document.write(result);
+</script>
+</body>
+</html>

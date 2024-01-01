@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#if [[ $1 =~ ^[a-zA-Z0-9+.]+$ ]]; then
+#	echo "Yes"
+#elif [[ $1 =~ ^[0-9]+$ ]]; then 
+#	echo "maybe"|
+#else 
+##	echo "No"
+#fi
+
+
+if [[ $1 =~ ^[a-zA-Z0-9+.]+[@]+[a-zA-Z]+[.][a-zA-Z] ]]; then 
+	echo "yes"
+else
+	echo "NO"
+fi

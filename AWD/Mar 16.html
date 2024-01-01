@@ -1,0 +1,114 @@
+<!-- <html>
+<body>
+<script>
+    x = prompt("Enter a string...")
+    i = 0
+    n = x.length
+    z = ""
+    for (i; i>x; i++){
+        if (Number.isInteger(x[i])){
+            z += x[i]
+        }
+    }
+    document.write(z)
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Statements</h1>
+<h2>The class Statement</h2>
+<p id="demo"></p>
+<script>
+class Car {
+  constructor(brand) {
+    this.carName = brand;
+  }
+}
+myCar = new Car("Ford");
+also_my_car = new Car("Skoda")
+document.getElementById("demo").innerHTML = "My car is a " + myCar.carName;
+document.getElementById("demo").innerHTML += "<br>My car is a " + also_my_car.carName;
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<!-- <h2>JavaScript Class Inheritance</h2>
+<p>Use the "extends" keyword to inherit all methods from another class.</p>
+<p>Use the "super" method to call the parent's constructor function.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = mycar.show();
+
+
+var myVar = 100;
+
+function WhoIsThis() {
+    var myVar = 200;
+
+    alert(myVar); // 200
+    alert(this.myVar); // 100
+}
+
+WhoIsThis(); // inferred as window.WhoIsThis()
+ 
+
+</script> -->
+
+
+<script>
+    class Shape{
+        rect(l,b) {
+            document.write("<br>The area of the rectangle is ", l*b)
+        }
+        sq(a){
+            document.write("<br>The area of the square is ", a*a)
+        }
+        tri(b,h){
+            document.write("<br>The area of the triangle is ", b*h/2)
+        }
+    }
+    hi = new Shape()
+    hi.rect(10,25)
+    hi.sq(25)
+    hi.tri(12,24)
+</script>
+</body>
+</html>
+
+
+
+
+
+
