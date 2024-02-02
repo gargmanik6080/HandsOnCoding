@@ -11,7 +11,8 @@
 #define yes cout<<"YES\n";
 #define no cout<<"NO\n";
 #define ll long long int
-const int MOD = 1000000007;
+#define vec vector<int>
+const int MOD = 1e+7;
 
 using namespace std;
 
