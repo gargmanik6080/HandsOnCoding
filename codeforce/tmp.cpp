@@ -1,46 +1,32 @@
-#include "bits/stdc++.h"
+#include <iostream>
+#include <algorithm>
+
 using namespace std;
- 
-#define ll long long
- 
-#define          all(v)              v.begin(), v.end()
-#define         rall(v)              v.rbegin(),v.rend()
- 
-#define            pb                push_back
-#define          sz(a)               (int)a.size()
- 
-void solve() {
-    int n; cin >> n;
-    vector<int> a(n);
-    for(int i = 0; i < n; ++i) {
-        cin >> a[i];
-    }
-    sort(all(a));
-    if(a[0] != 1) {
-        cout << "NO\n";
-        return;
-    }
-    vector<int> dp(5005, 0);
-    dp[1] = 1;
-    for(int i = 1; i < n; ++i) {
-        if(!dp[a[i]]) {
-            cout<<i<<" ";
-            cout << "NO\n";
-            return;
-        }
-        for(int j = 5000; j >= a[i]; --j) {
-            dp[j] |= dp[j - a[i]];
-            cout<<j<<" "<<j-a[i]<<"  ";
-        }
-    }
-    cout << "YES\n";
+
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
 }
- 
-int32_t main() {
-    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int t = 1;
+
+int main() {
+    int t;
     cin >> t;
-    while(t--) {
-        solve();
+    
+    while (t--) {
+        int x, n;
+        cin >> x >> n;
+        
+        int max_balance = 1;
+        for (int i = 1; i <= n; ++i) {
+            int diff = x / i;
+            if (x % i == 0 && diff <= n) {
+                max_balance = max(max_balance, diff);
+            }
+        }
+        
+        cout << max_balance << endl;
     }
+    
+    return 0;
 }
