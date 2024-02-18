@@ -24,12 +24,12 @@ void solve(){
     int n; cin>>n;
     int k; cin>>k;
 
-    int x = 2*(n-1);
-    if(2*x >= k) cout<<ceil(k*1.0/2);
+    int x = ceil(k*1.0/2);
+    if((4*n)-2 == k) cout<<x+1;
     else {
-        k-=2*x;
-        int ans = x;
-        cout<<ans+k;
+        // k-=2*x;
+        // int ans = x;
+        cout<<x;
     }
 
     // if(k == (2*n-2)) x = max(x-1, 0);
