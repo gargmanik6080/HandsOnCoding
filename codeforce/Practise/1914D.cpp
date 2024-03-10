@@ -11,7 +11,7 @@
 #define          sz(a)               (int)a.size()
 #define vec vector<int>
 #define rep(a,b) for (int i = a; i < b; i++)
-#define int long long
+#define ll long long int
 
 #define yes cout<<"YES\n";
 #define no cout<<"NO\n";
@@ -22,11 +22,36 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    cout<<n<<"\n";
+    vector<vector<int>> a(n);
+    vector<vector<int>> b(n);
+    vector<vector<int>> c(n);
+    for(int i=0; i<n; i++){
+        int x; cin>>x;
+        a[i] = {x, i};
+    }
+    for(int i=0; i<n; i++){
+        int x; cin>>x;
+        b[i] = {x, i};
+    }
+    for(int i=0; i<n; i++){
+        int x; cin>>x;
+        c[i] = {x, i};
+    }
+    sort(rall(a));
+    sort(rall(b));
+    sort(rall(c));
+    int s=0;
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            for(int k=0; k<3; k++){
+                if(a[i][1] != b[j][1] && b[j][1] != c[k][1] && a[i][1] != c[k][1]) s = max(s, (a[i][0]+b[j][0]+c[k][0]));
+            }
+        }
+    }
+    cout<<s<<"\n";
 }
 
-signed main(){
+int main(){
     fst;
     int t = 1;
     cin>>t;

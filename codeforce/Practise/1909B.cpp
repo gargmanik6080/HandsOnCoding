@@ -11,8 +11,8 @@
 #define          sz(a)               (int)a.size()
 #define vec vector<int>
 #define rep(a,b) for (int i = a; i < b; i++)
+#define ll long long int
 #define int long long
-
 #define yes cout<<"YES\n";
 #define no cout<<"NO\n";
 
@@ -22,8 +22,19 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    cout<<n<<"\n";
+    vector<int> a(n);
+    rep(0, n){
+        cin>>a[i];
+    }
+    for(int i=1;i<LONG_LONG_MAX/2; i*=2){
+        set<int>mp;
+        for(int j=0; j<n; j++) mp.insert(a[j]%i);
+        if(mp.size() == 2) {
+            cout<<i<<"\n";
+            return ;
+        }
+    }
+    cout<<1e17<<"\n";
 }
 
 signed main(){
