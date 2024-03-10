@@ -1,4 +1,3 @@
-
 #define fst ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define          all(v)              v.begin(), v.end()
 #define         rall(v)              v.rbegin(),v.rend()
