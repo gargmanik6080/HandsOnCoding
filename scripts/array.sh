@@ -7,7 +7,7 @@ for item in ${my_array[@]}; do
 done
 
 for i in ${!my_array[@]}; do
-  echo ${my_array[$i]}
+  echo ${my_array[i]}
 done
 
 
