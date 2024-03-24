@@ -4,10 +4,6 @@
 #define            emp                emplace_back
 #define          sz(a)               (int)a.size()
 #define vec vector<int>
-#define rep(a,b) for (int i = a; i < b; i++)
 #define ll long long int
-
-#define yes cout<<"YES\n";
-#define no cout<<"NO\n";
 
 const int MOD = 1e+7;
