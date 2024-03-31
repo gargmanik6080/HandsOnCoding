@@ -1,11 +1,10 @@
 # import pandas
-'''
-exa = "sample.csv"
-fl = open(exa, "r")
-print(fl.name)
-print(fl.mode)
-print(fl.read())
-fl.close()'''
+# exa = "sample.csv"
+# fl = open(exa, "r")
+# print(fl.name)
+# print(fl.mode)
+# print(fl.readline())
+# fl.close()
 
 
 ###  READING
