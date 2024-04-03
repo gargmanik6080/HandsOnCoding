@@ -5,7 +5,7 @@ import pandas as pd
 # df = pd.DataFrame(lst)
 # print(df)
 
-dict
+# dict
 dct = {"Name": ["Manik", "Tom", "Nick"], "Age": [18, 12, 16]}
 df1 = pd.DataFrame(dct)
 print(df1)
@@ -16,13 +16,14 @@ print(df1["Age"])
 # from pandas import *
 # s = Series(rn(3), ('a','b', 'c'))
 # print(s)
-# print(s.index)
+# # print(s.index)
 # s = s.reindex(['c','b','a'])
 # print(s.index)
+# print(s)
 
-# # s = s + s
-# d = {1 : s*s, 2: s+s, 3: s*3 }
-# # print(s)
+# s = s + s
+# # d = {1 : s*s, 2: s+s, 3: s*3 }
+# print(s)
 
 
 
@@ -35,3 +36,6 @@ print(df1["Age"])
 #df.corr()
 #
 #
+
+# print(df1[df1["Age"]>=15])
+df1.to_csv("test.csv", index=False)
