@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JS Basics</title>
+    <style>
+        .styl{
+            background-color: aqua;
+        }
+    </style>
+    </head>
+<body>
+    <p id="dd">Hello </p>
+<script>
+    // function avg(a,b){
+    //     return (a+b)/2;
+    // }
+    // c = avg(10,15);
+    // document.write(c);
+
+    // LOOPS
+    var arr=[1,20,13,4,17,6,5,100];
+    // for(let i=0;i<arr.length;i++){
+    //     document.write(arr[i]+" ");
+    // }
+    // arr.forEach(function(i){
+    //     document.write(i+" ");
+    // })
+    arr.sort(function(a,b){ return a-b;});
+    document.write(arr)
+    // type document.gebcn  and press enter
+    document.getElementById("dd").classList.add("styl"); // also remove
+
+</script>
+</body>
+</html>

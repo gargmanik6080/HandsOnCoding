@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz Application</title>
+    <style>
+        /* Inline CSS styles */
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Online Quiz Application</h1>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" id="usernameInput">
+            <input type="password" placeholder="Password" id="passwordInput">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <!-- Quiz Form -->
+    <div id="quizForm" style="display: none;">
+        <h2>Quiz</h2>
+        <p id="question"></p>
+        <form>
+            <input type="radio" name="answer" id="option1">
+            <label for="option1" id="option1Label"></label><br>
+            <input type="radio" name="answer" id="option2">
+            <label for="option2" id="option2Label"></label><br>
+            <input type="radio" name="answer" id="option3">
+            <label for="option3" id="option3Label"></label><br>
+            <input type="radio" name="answer" id="option4">
+            <label for="option4" id="option4Label"></label><br><br>
+            <button type="button" onclick="submitAnswer()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Inline JavaScript code
+        // Add your JavaScript code here
+
+        // Sample functions for login and quiz submission
+        function login() {
+            // Retrieve username and password inputs
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            // Perform login validation (e.g., check credentials in the database)
+            // Add your login validation logic here
+
+            // If login is successful, display the quiz form
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("quizForm").style.display = "block";
+
+            // Load the first question
+            loadQuestion();
+        }
+
+        function submitAnswer() {
+            // Retrieve the selected answer
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedAnswer) {
+                // Process the answer (e.g., calculate score)
+                // Add your answer processing logic here
+
+                // Load the next question
+                loadQuestion();
+            } else {
+                alert("Please select an answer!");
+            }
+        }
+
+        function loadQuestion() {
+            // Sample question and options
+            var question = "What is the capital of France?";
+            var option1 = "London";
+            var option2 = "Paris";
+            var option3 = "Berlin";
+            var option4 = "Rome";
+
+            // Display the question and options
+            document.getElementById("question").innerHTML = question;
+            document.getElementById("option1Label").innerHTML = option1;
+            document.getElementById("option2Label").innerHTML = option2;
+            document.getElementById("option3Label").innerHTML = option3;
+            document.getElementById("option4Label").innerHTML = option4;
+
+            // Clear the selected answer
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                selectedAnswer.checked = false;
+            }
+        }
+    </script>
+</body>
+</html>

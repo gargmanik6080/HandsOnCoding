@@ -23,19 +23,19 @@ read -p "Enter your fname: " fname
 read -p "Enter your lastname: " lname
 read -p "Enter your roll number: " roll
 
-if [[ "$name" =~  ^[a-zA-Z]+$ ]]; then
+if [[ "$fname" =~  ^[a-zA-Z]+$ ]]; then
         echo "The value provided as fname has been accepted..."
 else
         echo "The value provided as fname has not been accepted..."
 fi
 
-if [[ "$name" =~  ^[a-zA-Z]+$ ]]; then
+if [[ "$lname" =~  ^[a-zA-Z]+$ ]]; then
         echo "The value provided as lname has been accepted..."
 else
         echo "The value provided as lname has not been accepted..."
 fi
 
-if [[ "$name" =~  ^[0-9]+$ ]]; then
+if [[ "$roll" =~  ^[0-9]+$ ]]; then
         echo "The value provided as name has been accepted..."
 else
         echo "The value provided as name has not been accepted..."

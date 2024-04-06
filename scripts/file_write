@@ -7,9 +7,9 @@ then
 else
 	echo "File $file donot exist"
 	read -p "Do you want to create this file? Press 1 if Yes : " options
-	if [ options = 1 ]
+	if [ $options -eq 1 ]
 	then
-		[ cat $file]
+		echo $(touch $file)
 		echo "File $file created "
 	fi 
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#echo -e "###################### SYSTEM INFORMATION ###########################\n\n"
+echo -e "\n\n###################### SYSTEM INFORMATION ###########################\n\n"
 
 #echo -e "My logged in User name is\t\t: \t${USER}"
 #echo -e "My kernal version is\t\t\t: \t$(uname -r)"

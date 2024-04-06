@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JS Basics</title>
+    </head>
+<body>
+    <p id="dd" class="contain">Hello </p>
+    <p id="dd2" class="contain">Hi </p>
+    <p id="dd3" class="contain">Bye </p>
+    <button id="btn" onclick="clicked()">button</button>
+    <br>
+    <button id="btn2">button2</button>
+<script>
+    obj = {name:'Manik', age:19, abc:{"mark's":20}}
+    js = JSON.stringify(obj);
+    console.log(js);
+    par = JSON.parse(`{"name":"Manik","age":19,"abc":{"mark's":20}}`)
+    console.log(par);
+    par2 = JSON.parse(js);
+    console.log(par2);
+</script>
+</body>
+</html>

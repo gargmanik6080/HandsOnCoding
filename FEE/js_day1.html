@@ -1,0 +1,21 @@
+<html>
+    <title>JS Practice</title>
+    <body>
+        <h2>Event Handling</h2>
+
+        <button onclick="document.getElementById('demo').innerHTML= Date()">Time?</button>
+        <br>
+        <button onclick="this.innerHTML= Date()">Time(by this)?</button>
+        <br>
+        <button onclick="dispDate()">Time by Function?</button>
+        <p id="demo"></p>
+        <p id="demo2" onmouseover ="document.getElementById('demo').style.color = 'red'"></p>
+
+
+        <script>
+            function dispDate(){
+                document.getElementById("demo2").innerHTML = Date();
+            }
+        </script>
+    </body>
+</html>

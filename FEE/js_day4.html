@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JS Basics</title>
+    </head>
+<body>
+    <p id="dd" class="contain">Hello </p>
+    <p id="dd2" class="contain">Hi </p>
+    <p id="dd3" class="contain">Bye </p>
+    <button id="btn" onclick="clicked()">button</button>
+    <br>
+    <button id="btn2">button2</button>
+<script>
+    tn = document.getElementsByTagName('p')
+    // console.log(tn);
+    tn[0].style.color = 'red';
+    x = document.createElement('div');
+    x.innerHTML = "This is a created div";
+    tn[1].appendChild(x);
+
+    // replaceChild(element)
+    // removeChild(element)
+
+
+    //Selecting using query
+    /*
+    // sel = document.querySelector(".contain");
+    sel = document.querySelectorAll(".contain");
+    console.log(sel);
+    */
+
+    // EVENTS
+    /*
+    function clicked(){
+        console.log("The btn was clicked");
+    }
+
+    window.onload = function(){
+        console.log("It works!!!");
+    }
+    dd.addEventListener("click", function(){
+        // document.write("Click hora h");
+    })
+    dd2.addEventListener("mouseover", function(){
+        console.log("Mouse andar ayaa");
+    })
+    dd2.addEventListener("mouseout", function(){
+        console.log("Mouse bahar gaya");
+    })
+    
+    
+    //    btn.addEventListener("click", function(){
+        //       document.querySelectorAll(".contain")[2].innerHTML = 
+        //           "<b> The btn was clicked</b>";
+        //    })
+
+
+    */
+
+    /*
+    x = document.querySelectorAll(".contain")[2].innerHTML;
+    btn2.addEventListener("mousedown", function(){
+        document.querySelectorAll(".contain")[2].innerHTML = "<b>Hidden text</b>"
+        // console.log("Mouse clicked");
+    })
+    btn2.addEventListener("mouseup", function(){
+        document.querySelectorAll(".contain")[2].innerHTML = x;
+        // console.log("Mouse unclicked");
+    })
+    */
+
+   // ARROW FUNCTION
+
+//    function sum(a,b){
+//       return a+b ;
+//    }
+
+    sum = (a,b) =>{
+        return a+b;
+    }
+
+    // SET TIMEOUT
+
+    logit = () => {
+        console.log("Logged");
+    }
+    // setTimeout(logit, 2000);
+    clr = setInterval(logit, 2000);
+
+    // LOCAL STORAGE
+    // localStorage.setItem('name','Manik')
+    // localStorage.removeItem('name')
+    // localStorage.clear()
+    console.log(localStorage.getItem('name'));
+</script>
+
+</body>
+</html>

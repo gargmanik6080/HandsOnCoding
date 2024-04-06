@@ -17,8 +17,8 @@ num2=20
 #echo $num1
 
 echo -e "Addition of two numbers"
-sum=$[${num1} + ${num2}]
-echo -e "${sum}"
+sum=$((${num1} + ${num2}))
+echo "${sum}"
 
 echo -e "Subtraction of two numbers"
 diff=$[${num1} - ${num2}]

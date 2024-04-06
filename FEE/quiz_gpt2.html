@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #loginForm,
+        #quizForm {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Online Quiz Application</h1>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" id="usernameInput">
+            <input type="password" placeholder="Password" id="passwordInput">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <!-- Quiz Form -->
+    <div id="quizForm" style="display: none;">
+        <h2>Quiz</h2>
+        <div id="questionContainer"></div>
+        <button type="button" onclick="submitAnswer()">Submit</button>
+    </div>
+
+    <script>
+        // Inline JavaScript code
+        // Add your JavaScript code here
+
+        var currentQuestion = 0;
+        var score = 0;
+
+        var questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["London", "Paris", "Berlin", "Rome"],
+                answer: 1
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: ["Mars", "Jupiter", "Saturn", "Neptune"],
+                answer: 1
+            },
+            {
+                question: "Which programming language is used to build web pages?",
+                options: ["HTML", "Java", "Python", "C++"],
+                answer: 0
+            }
+        ];
+
+        function login() {
+            // Retrieve username and password inputs
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            // Perform login validation (e.g., check credentials in the database)
+            // Add your login validation logic here
+
+            // If login is successful, display the quiz form
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("quizForm").style.display = "block";
+
+            // Load the first question
+            loadQuestion();
+        }
+
+        function submitAnswer() {
+            // Retrieve the selected answer
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedAnswer) {
+                // Check if the answer is correct
+                if (parseInt(selectedAnswer.value) === questions[currentQuestion].answer) {
+                    score++;
+                }
+
+                // Move to the next question
+                currentQuestion++;
+
+                // Check if there are more questions
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    // Display the final score
+                    document.getElementById("questionContainer").innerHTML = "<h3>Your Score: " + score + "/" + questions.length + "</h3>";
+                    document.getElementById("quizForm").style.textAlign = "center";
+                }
+            } else {
+                alert("Please select an answer!");
+            }
+        }
+
+        function loadQuestion() {
+            var questionContainer = document.getElementById("questionContainer");
+            questionContainer.innerHTML = "";
+
+            var question = questions[currentQuestion];
+
+            var questionElement = document.createElement("div");
+            questionElement.classList.add("question-container");
+
+            var questionText = document.createElement("p");
+            questionText.classList.add("question");
+            questionText.textContent = question.question;
+            questionElement.appendChild(questionText);
+
+            var options = document.createElement("div");
+            options.classList.add("options");
+
+            for (var i = 0; i < question.options.length; i++) {
+                var optionLabel = document.createElement("label");
+                var optionRadio = document.createElement("input");
+                optionRadio.type = "radio";
+                optionRadio.name = "answer";
+                optionRadio.value = i;
+
+                optionLabel.appendChild(optionRadio);
+                optionLabel.appendChild(document.createTextNode(question.options[i]));
+
+                options.appendChild(optionLabel);
+            }
+
+            questionElement.appendChild(options);
+            questionContainer.appendChild(questionElement);
+        }
+    </script>
+</body>
+</html>
