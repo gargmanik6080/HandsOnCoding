@@ -22,8 +22,17 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    cout<<n<<"\n";
+    int x, ans=0;cin>>x;
+    for(int i=0; i<n-1; i++){
+        // cout<<x<<" ";
+        int y;cin>>y;
+        if(x%2 == y%2) {
+            ans++;
+            // cout<<x<<" "<<y<<"\n";
+        }
+        x = y;
+    }
+    cout<<ans<<"\n";
 }
 
 signed main(){

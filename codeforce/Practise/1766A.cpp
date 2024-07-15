@@ -22,8 +22,20 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    cout<<n<<"\n";
+    int ans=0;
+    int curr=1;
+    int mul=1;
+    while(n >= curr){
+        for(int i=1; i<=9; i++){
+            if(n < curr) {
+                break;
+            }
+            curr+=mul;
+            ans++;
+        }
+        mul*=10;
+    }
+    cout<<ans<<"\n";
 }
 
 signed main(){

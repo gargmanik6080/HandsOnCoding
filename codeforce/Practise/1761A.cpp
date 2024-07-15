@@ -13,8 +13,8 @@
 #define rep(a,b) for (int i = a; i < b; i++)
 #define int long long
 
-#define yes cout<<"YES\n";
-#define no cout<<"NO\n";
+#define yes cout<<"YES\n"
+#define no cout<<"NO\n"
 
 const int MOD = 1e+7;
 
@@ -22,8 +22,13 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    cout<<n<<"\n";
+    int a,b; cin>>a>>b;
+    if(n==a && a==b) yes;
+    else if(a+b == n) no;
+    else if(a+b+1 == n) no;
+    else if(a+b < n) yes;
+    else no ;
+    // cout<<n<<"\n";
 }
 
 signed main(){
