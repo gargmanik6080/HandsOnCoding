@@ -22,6 +22,16 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
+    
+    vector<vector<int>> v(Math.floor(n-1)/2);
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            int border = min(min(i, j), min(n-i-1, n-j-1));
+            v[i].insert(arr[i][j]);
+        }
+    }
+    for(auto i : v) sort(v);
 
 }
 
