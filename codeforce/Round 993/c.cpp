@@ -2,7 +2,6 @@
 // #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
 #include <iostream>
-#include "bits/stdc++.h"
 
 #define fst ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define          all(v)              v.begin(), v.end()
@@ -22,8 +21,29 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
+    int a; cin>>a;
+    int b; cin>>b;
+    int c; cin>>c;
+
+    int ans=0;
+    int t1=n;
+    int t2=n;
+
+    ans+= max((int)0, min(t1, a));
+    ans+= max((int)0, min(t2, b));
+
+    t1 = max((int)0, min(t1, a));
+    t2 = max((int)0, min(t2, b));
+
+    int x = min(n - t1, c);
+    ans+=x;
+    c-=x;
+
+    x = min(n - t2, c);
+    ans+=x;
+    c-=x;
     
-    
+    cout<<ans<<"\n";
 }
 
 signed main(){

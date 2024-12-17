@@ -23,7 +23,7 @@ using namespace std;
 void solve(){
     int n; cin>>n;
     
-    
+    cout<<n<<"\n";
 }
 
 signed main(){

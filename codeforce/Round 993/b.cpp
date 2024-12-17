@@ -21,9 +21,15 @@ const int MOD = 1e+7;
 using namespace std;
 
 void solve(){
-    int n; cin>>n;
-    
-    
+    string s; cin>>s;
+    int n = s.length();
+    string a = s;
+    reverse(all(a));
+    for(int i=0; i<a.length(); i++){
+        if(a[i]=='q') a[i]='p';
+       else if(a[i]=='p') a[i]='q';
+    }
+    cout<<a<<"\n";
 }
 
 signed main(){
