@@ -22,8 +22,20 @@ using namespace std;
 
 void solve(){
     int n; cin>>n;
-    
-    
+    vec v1(n);
+    vec v2(n);
+    for(int i=0; i<n; i++) cin>>v1[i];
+    for(int i=0; i<n; i++) cin>>v2[i];
+    sort(all(v1));
+    sort(all(v2), greater<int>());
+    int ans=1;
+    for(int i=0; i<n; i++) {
+        int ub = v1.size() - (upper_bound(v1.begin(), v1.end(), v2[i]) - v1.begin());
+        ans= ans*max(ub - i, 0ll)%MOD;
+    }
+    // cout<<"   ";
+    // for(int i=0; i<n; i++) cout<<v1[i]<<" ";
+    cout<<ans%MOD<<endl;
 }
 
 signed main(){
@@ -36,3 +48,7 @@ signed main(){
     }
     return 0;
 }
+// 2 4 5 6 8 9
+// 2 4 5 0 0 9
+// 1 1 3 4 5 6 
+// 
